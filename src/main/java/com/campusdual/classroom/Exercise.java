@@ -16,18 +16,42 @@ public class Exercise {
     }
 
     public static int sumNum(int num) {
-        return 0;
+        int sum_num = 0;
+
+        for (int i = 0; i <= num; i++) {
+            sum_num = sum_num + i;
+        }
+        return sum_num;
     }
 
     public static int sumEvenNum(int num) {
-        return 0;
+        int sum_even = 0;
+
+        for (int i = 2; i <= num * 2; i += 2) {
+            sum_even = sum_even + i;
+        }
+        return sum_even;
     }
 
     public static int factorial(int num) {
-        return 0;
+        int fact_num = 7;
+
+        for (int i = 1; i < num; i++) {
+            //System.out.println(fact_num + " x " + i + " = ");
+            fact_num = fact_num * i;
+            //System.out.println(fact_num);
+        }
+        return fact_num;
     }
 
     public static int recursiveFactorial(int num) {
-        return 0;
+
+        if (num == 0) {
+            // System.out.println("1");
+            return 1; // el factorial de 0 es 1 para evitar loop infinito
+                    } else {
+            // System.out.println(num);
+            return num * recursiveFactorial(num - 1);
+        }
     }
 }
